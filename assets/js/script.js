@@ -25,32 +25,48 @@ var button1234 = document.createElement("button"); // Button element
 var timeLeft = 60; // Initial time left
 
 
-var questions = [
-  {
-    title: "Which was the first 2 technologies we learned at the start of class", // Question title
-    choices: ["HTML & CSS", "MYSQL & Javascript", "WhatsApp & Facebook", "Flex Columns & ChatGPT"], // Array of answer choices
-    answer: "HTML & CSS" // Correct answer
-  },
-  {
-    title: "What does HTML stand for?", // Question title
-    choices: ["Hyper Text Markup Language", "High Tech Markup Language", "Home Tool Markup Language", "Hyperlinking Text Markup Language"], // Array of answer choices
-    answer: "Hyper Text Markup Language" // Correct answer
-  },
-  {
-    title: "What does CSS stand for?", // Question title
-    choices: ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets", "Coded Style Sheets"], // Array of answer choices
-    answer: "Cascading Style Sheets" // Correct answer
-  },
-  {
-    title: "Which programming language is often used for client-side web development?", // Question title
-    choices: ["Python", "Java", "JavaScript", "C++"], // Array of answer choices
-    answer: "JavaScript" // Correct answer
-  },
-  {
-    title: "What is the purpose of a database management system (DBMS)?", // Question title
-    choices: ["To create web pages", "To manage and store data", "To design user interfaces", "To write algorithms"], // Array of answer choices
-    answer: "To manage and store data" // Correct answer
+var questionsObject = { // Object that holds correct answers.
+  correct: { 
+      0 : "Which was the first 2 technologies we learned at the start of class",
+      1 : "What does HTML stand for?",
+      2 : "What does CSS stand for?", // Button #4 for 
+      3 : "Which programming language is often used for client-side web development?", // Button #3
+      4 : "What is the purpose of a database management system (DBMS)?"
   }
-];
+};
 
-  
+// Object that holds the questions and answers
+var answersObject = {
+  answers: {
+    0: {
+      0: "HTML & CSS", // Button #1 (Pick this one)
+      1: "MYSQL & Javascript", // Button #2
+      2: "WhatsApp & Facebook", // Button #3
+      3: "Flex Columns & ChatGPT" // Button #4
+    },
+    1: {
+      0: "Hyper Text Markup Language", // Button #1 (Pick this one)
+      1: "High Tech Markup Language", // Button #2
+      2: "Home Tool Markup Language", // Button #3
+      3: "Hyperlinking Text Markup Language" // Button #4
+    },
+    2: {
+      0: "Cascading Style Sheets", // Button #1 (Pick this one)
+      1: "Computer Style Sheets", // Button #2
+      2: "Creative Style Sheets", // Button #3
+      3: "Coded Style Sheets" // Button #4 
+    },
+    3: {
+      0: "Python", // Button #1
+      1: "Java", // Button #2
+      2: "JavaScript", // Button #3 (Pick this one)
+      3: "C++" // Button #4
+    },
+    4: {
+      0: "To create web pages", // Button #1
+      1: "To manage and store data", // Button #2 (Pick this one)
+      2: "To design user interfaces", // Button #3
+      3: "To write algorithms" // Button #4
+    }
+  }
+};
