@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #timeLeft {
+    font-weight: bold;
+  }
+  
+  #mainDiv {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #questionDisplay {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  #submitScore {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  #answerCorrectWrongGrid {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #answerCorrectWrong {
+    font-weight: bold;
+  }
+  

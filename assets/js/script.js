@@ -53,27 +53,38 @@ var questions = [
       console.log(i + 1 + ". " + choices[i]);
     }
   
-    var userAnswer = prompt("Please enter the number of your answer:");
+    // Create a container for the answer choices
+    var choicesContainer = document.getElementById("choices");
+    choicesContainer.innerHTML = ""; // Clear previous choices
   
-    if (userAnswer !== null) {
-      var choiceIndex = parseInt(userAnswer) - 1;
-      var selectedChoice = choices[choiceIndex];
+    // Create buttons for each choice
+    for (var i = 0; i < choices.length; i++) {
+      var choiceButton = document.createElement("button");
+      choiceButton.textContent = choices[i];
+      choiceButton.addEventListener("click", handleAnswerClick);
+      choicesContainer.appendChild(choiceButton);
+    }
+  }
   
-      if (selectedChoice === question.answer) {
-        console.log("Correct!");
-        score++;
-      } else {
-        console.log("Incorrect!");
-      }
+  // Function to handle the user's answer selection
+  function handleAnswerClick(event) {
+    var selectedChoice = event.target.textContent;
+    var question = questions[currentQuestion];
   
-      console.log("------------------------------");
+    if (selectedChoice === question.answer) {
+      console.log("Correct!");
+      score++;
+    } else {
+      console.log("Incorrect!");
+    }
   
-      currentQuestion++;
-      if (currentQuestion < questions.length) {
-        displayQuestion();
-      } else {
-        endQuiz();
-      }
+    console.log("------------------------------");
+  
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      displayQuestion();
+    } else {
+      endQuiz();
     }
   }
   
