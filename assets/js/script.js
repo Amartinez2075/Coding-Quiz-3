@@ -1,3 +1,29 @@
+var quizStatus = true; 
+var questionNumber = 0; 
+var answerNumber = 0; 
+var score = 0; 
+var highScore = 50; 
+var finalAnswerCheck = 0 
+var checkTimes = 1 
+var viewHighScoresBtnEl = document.getElementById('view-high-scores'); 
+var startQuizBtnEl = document.getElementById('start-quiz'); 
+var answer1BtnEl = document.getElementById('answer1'); 
+var answer2BtnEl = document.getElementById('answer2'); 
+var answer3BtnEl = document.getElementById('answer3'); 
+var answer4BtnEl = document.getElementById('answer4'); 
+var submitScoreEl = document.getElementById('submitScore'); 
+var questionsEl = document.getElementById('questions'); q
+var mainDivEl = document.getElementById('mainDiv'); 
+var htmlTimeLeft = document.getElementById('timeLeft');
+var answerCorrectWrong = document.getElementById('answerCorrectWrong'); 
+var questionDisplayEl = document.createElement("questionDisplay"); 
+var finalScoreDisplayEl = document.createElement("finalScoreDisplay"); 
+var enterInitialsEl = document.createElement("enterInitials");
+var enterInitialsTextAreaEl = document.createElement("enterInitialsTextArea"); 
+var button1234 = document.createElement("button"); 
+var timeLeft = 60; 
+
+
 var questions = [
     {
       title: "Which was the first 2 technologies we learned at the start of class",
@@ -25,76 +51,4 @@ var questions = [
       answer: "To manage and store data"
     }
   ];
-  
-  var score = 0;
-  var currentQuestion = 0;
-  var timeLeft = 60;
-  var timerInterval;
-  
-  // Function to start the timer
-  function startTimer() {
-    timerInterval = setInterval(function() {
-      timeLeft--;
-      if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        endQuiz();
-      }
-    }, 1000);
-  }
-  
-  // Function to display the current question
-  function displayQuestion() {
-    var question = questions[currentQuestion];
-    var title = question.title;
-    var choices = question.choices;
-  
-    console.log("Question: " + title);
-    for (var i = 0; i < choices.length; i++) {
-      console.log(i + 1 + ". " + choices[i]);
-    }
-  
-    // Create a container for the answer choices
-    var choicesContainer = document.getElementById("choices");
-    choicesContainer.innerHTML = ""; // Clear previous choices
-  
-    // Create buttons for each choice
-    for (var i = 0; i < choices.length; i++) {
-      var choiceButton = document.createElement("button");
-      choiceButton.textContent = choices[i];
-      choiceButton.addEventListener("click", handleAnswerClick);
-      choicesContainer.appendChild(choiceButton);
-    }
-  }
-  
-  // Function to handle the user's answer selection
-  function handleAnswerClick(event) {
-    var selectedChoice = event.target.textContent;
-    var question = questions[currentQuestion];
-  
-    if (selectedChoice === question.answer) {
-      console.log("Correct!");
-      score++;
-    } else {
-      console.log("Incorrect!");
-    }
-  
-    console.log("------------------------------");
-  
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-      displayQuestion();
-    } else {
-      endQuiz();
-    }
-  }
-  
-  // Function to end the quiz and display the final score
-  function endQuiz() {
-    clearInterval(timerInterval);
-    console.log("Quiz completed!");
-    console.log("Your score: " + score + " out of " + questions.length);
-  }
-  
-  startTimer();
-  displayQuestion();
   
