@@ -176,3 +176,48 @@ if ( quizUserDetails == checkUserValue[0] && highScore == checkUserValue[1] ) {
 }
 
 } );
+
+answer1BtnEl.addEventListener("mouseover", function() {
+
+  answerCorrectWrong.style.display='none';
+
+});
+
+answer2BtnEl.addEventListener("mouseover", function() {
+
+  answerCorrectWrong.style.display='none';
+
+});
+
+answer3BtnEl.addEventListener("mouseover", function() {
+
+  answerCorrectWrong.style.display='none';
+
+});
+
+answer4BtnEl.addEventListener("mouseover", function() {
+
+  answerCorrectWrong.style.display='none';
+
+});
+
+submitScoreEl.addEventListener("mouseover", function() {
+
+  answerCorrectWrong.style.display='none';
+
+});
+
+startQuizBtnEl.addEventListener("click", function() {
+
+//debugger;
+  startQuizBtnEl.style.display = 'none';
+  questionDisplay.style.display='none';
+  finalScoreDisplay.style.display = 'none';
+  enterInitials.style.display='none';
+  score = 0; // Score is 0 again.
+  timeLeft=60;
+  htmlTimeLeft.textContent = timeLeft; //Counter to display once more to make look smoother.
+  finalAnswerCheck = 0; // Check if last question and wrong.
+  checkTimes = 1; // Check timer for funciton patch.
+
+//debugger;
