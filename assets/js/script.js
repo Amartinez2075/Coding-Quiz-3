@@ -78,3 +78,27 @@ var answersObject = {
     }
   }
 };
+
+//Initialize the display timer at default value
+htmlTimeLeft.textContent = timeLeft;
+
+viewHighScoresBtnEl.addEventListener("click", function() { // View high scores
+
+    var quizUsers = "";
+    var substringTest ="";
+    var highScores = "";
+
+    for (var i=0; i < localStorage.length; i++) {
+        var checkUserValue = [];
+        
+        quizUsers = localStorage.getItem(localStorage.key(i));
+        substringTest = quizUsers.substring(0,4) 
+        if (substringTest == "quiz") {
+            checkUserValue = quizUsers.split(",");
+            var userName = checkUserValue[0]
+            highScores += "User " + userName.substring(4) + " high score is: " + checkUserValue[1] + "\n";
+       }
+    }
+    window.alert(highScores);
+
+});
