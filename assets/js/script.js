@@ -79,9 +79,10 @@ var answersObject = {
   }
 };
 
-//Initialize the display timer at default value
+// Initialize the display timer at the default value
 htmlTimeLeft.textContent = timeLeft;
 
+// Event listener for viewing high scores
 viewHighScoresBtnEl.addEventListener("click", function() { // View high scores
 
     var quizUsers = "";
@@ -103,6 +104,7 @@ viewHighScoresBtnEl.addEventListener("click", function() { // View high scores
 
 });
 
+// Event listener for submitting scores
 submitScoreEl.addEventListener("click", function() { 
     
 
@@ -115,6 +117,7 @@ submitScoreEl.addEventListener("click", function() {
   value = [quizUserDetails,highScore] 
 
 
+  // Check if there is any data stored in the local storage
   if (!localStorage.length) {
       localStorage.setItem("test","test");
   }
@@ -130,12 +133,46 @@ submitScoreEl.addEventListener("click", function() {
 
     checkUser = localStorage.getItem(quizUserDetails);
 
+    // If the user's initials and score are not stored, add them to the local storage
     if (checkUser == null) { 
         localStorage.setItem(quizUserDetails, value); 
         window.alert("Your score of " + highScore + " has been submitted!")
         break;
     } else if (checkUser != null){
         checkUserValue = checkUser.split(","); 
-       
+        // Process the stored data if needed
     
     }
+}
+
+if ( quizUserDetails == checkUserValue[0] && highScore == checkUserValue[1] ) {
+
+       
+  // Only insert if the current highScore is higher, 
+  // otherwise let the user know they had a higher score alreay
+  localStorage.setItem(quizUserDetails, value); // Value is equal to 
+  window.alert(highScore + " " + "is the latest entry for user initial " + enterInitialsTextArea.value + ". Entry will not be added.")
+  break; 
+  } else if (enterInitialsTextArea.value == "") {
+      window.alert("Please enter an initial");
+      break;
+  } else if ( quizUserDetails == checkUserValue[0] && highScore > checkUserValue[1] ) { 
+      // New high score submitted!
+      localStorage.setItem(quizUserDetails, value); // Value is equal to 
+      window.alert("New high score of " + highScore + " has been submitted!.\nYour previous score was " + checkUserValue[1])
+      break; 
+  } else if ( quizUserDetails == checkUserValue[0] && highScore < checkUserValue[1] ) { 
+      // Your previous code was higher!
+      localStorage.setItem(quizUserDetails, value); // Value is equal to 
+      window.alert("Your previous code of " + checkUserValue[1] + " was higher. Entry will not be added.");
+      break; 
+
+  } else { // New entry all together
+      localStorage.setItem(quizUserDetails, value); // Value is equal to 
+      window.alert("Your score of " + highScore + " has been submitted!")
+      break;
+  }
+          
+}
+
+} );
