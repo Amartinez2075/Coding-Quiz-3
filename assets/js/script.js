@@ -24,6 +24,14 @@ var enterInitialsTextAreaEl = document.createElement("enterInitialsTextArea"); /
 var button1234 = document.createElement("button"); // Button element
 var timeLeft = 60; // Initial time left
 
+// Do not display anything that is not ready to be displayed
+answer1BtnEl.style.display = 'none';
+answer2BtnEl.style.display = 'none';
+answer3BtnEl.style.display = 'none';
+answer4BtnEl.style.display = 'none';
+submitScoreEl.style.display = 'none';
+answerCorrectWrong.style.display='none';
+enterInitialsTextArea.style.display='none';
 
 var questionsObject = { // Object that holds correct answers.
   correct: { 
