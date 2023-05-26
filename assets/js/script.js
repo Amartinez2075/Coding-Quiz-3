@@ -102,3 +102,40 @@ viewHighScoresBtnEl.addEventListener("click", function() { // View high scores
     window.alert(highScores);
 
 });
+
+submitScoreEl.addEventListener("click", function() { 
+    
+
+  var quizLocalStorage = "quiz";
+  var quizUserDetails = "";
+  var value = [];
+  
+
+  quizUserDetails = quizLocalStorage + enterInitialsTextArea.value 
+  value = [quizUserDetails,highScore] 
+
+
+  if (!localStorage.length) {
+      localStorage.setItem("test","test");
+  }
+
+  for (var i=0; i < localStorage.length; i++){
+        
+    var checkUser = "";
+    var checkUserValue = [];
+
+
+    quizUserDetails = quizLocalStorage + enterInitialsTextArea.value;
+
+
+    checkUser = localStorage.getItem(quizUserDetails);
+
+    if (checkUser == null) { 
+        localStorage.setItem(quizUserDetails, value); 
+        window.alert("Your score of " + highScore + " has been submitted!")
+        break;
+    } else if (checkUser != null){
+        checkUserValue = checkUser.split(","); 
+       
+    
+    }
