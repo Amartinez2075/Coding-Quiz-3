@@ -299,7 +299,7 @@ var timeInterval = setInterval(function() {
 //Lines between 263-397 are correct and working
             
 answer1BtnEl.addEventListener("click", function() {
-    if (questionDisplay.textContent === "The condition statement if/else is enclosed with the following:" && answer1BtnEl.textContent === "Parentheses") {
+    if (questionDisplay.textContent === "Which were the first 2 technologies we learned at the start of class:" && answer1BtnEl.textContent === "Parentheses") {
         console.log("Correct");
         // timeLeft += 1; // Add a second for a correct answer as it will take one second to move to the next question
         questionNumber = 2; // Move to the next question which is the third question
@@ -314,7 +314,7 @@ answer1BtnEl.addEventListener("click", function() {
             case "HTML & CSS":
                 console.log("Inside the case now");
                 answerCorrectWrong.style.display = "";
-                answerCorrectWrong.textContent = "Wrong!";
+                answerCorrectWrong.textContent = "Correct!";
                 answerCorrectWrong.style.borderTop = "solid #800080";
                 score = 1; // Give the user a 10+ score
                 questionNumber = 1; // Move to the next question which is the second question
@@ -323,7 +323,7 @@ answer1BtnEl.addEventListener("click", function() {
             case "MYSQL & Javascript":
                 console.log("Inside the case now");
                 answerCorrectWrong.style.display = "";
-                answerCorrectWrong.textContent = "Correct!";
+                answerCorrectWrong.textContent = "Wrong!";
                 answerCorrectWrong.style.borderTop = "solid #800080";
                 score = 1; // Give the user a 10+ score
                 questionNumber = 3; // Move to the next question which is the third question
@@ -332,7 +332,7 @@ answer1BtnEl.addEventListener("click", function() {
             case "WhatsApp & Facebook":
                 console.log("Inside the case now");
                 answerCorrectWrong.style.display = "";
-                answerCorrectWrong.textContent = "Correct!";
+                answerCorrectWrong.textContent = "Wrong!";
                 answerCorrectWrong.style.borderTop = "solid #800080";
                 score = 1; // Give the user a 10+ score
                 questionNumber = 4; // Move to the next question which is the fourth question
@@ -380,7 +380,7 @@ answer1BtnEl.addEventListener("click", function() {
 // Lines between 301-378 are correct and working
 
 answer2BtnEl.addEventListener("click", function() {
-    if (questionDisplay.textContent === "Strings must be enclosed with:" && answer2BtnEl.textContent === "Curly brackets") {
+    if (questionDisplay.textContent === "What does HTML stand for?:" && answer2BtnEl.textContent === "Hyper Text Markup Language") {
         console.log("Correct");
         //timeLeft += 1; // Add a second for a correct answer as it will take one second to move to the next question
         //questionNumber = 2; // Move to the next question
@@ -456,7 +456,7 @@ answer2BtnEl.addEventListener("click", function() {
 // Lines between 382-455 are correct and working
 
 answer3BtnEl.addEventListener("click", function() {
-    if (questionDisplay.textContent === "Commonly used datatypes DO NOT include?" && answer3BtnEl.textContent === "Alerts") {
+    if (questionDisplay.textContent === "What does CSS stand for?" && answer3BtnEl.textContent === "Cascading Style Sheets") {
         console.log("Correct");
         //timeLeft += 1; // Add a second for a correct answer as it will take one second to move to the next question
         questionNumber = 1; // Move to the next question which is the second question
@@ -526,7 +526,7 @@ answer3BtnEl.addEventListener("click", function() {
 // Lines between 458-524 are correct and working
 
 answer4BtnEl.addEventListener("click", function() {
-    if (questionDisplay.textContent === "Arrays can be used to store the following" && answer4BtnEl.textContent === "All of the above") {
+    if (questionDisplay.textContent === "Which programming language is often used for client-side web development?:" && answer4BtnEl.textContent === "JavaScript") {
         console.log("Correct");
         // timeLeft += 1; // Add a second for a correct answer as it will take one second to move to the next question
         // Game is overquestionNumber = 4; // Move to the next question
