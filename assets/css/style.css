@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Merienda', sans-serif;
+  font-family: 'Arial', sans-serif; /* Change font family */
   font-size: 22px;
   background-color: white;
 }
@@ -30,7 +30,7 @@ header {
   border: 0;
   outline: 0;
   color: blueviolet;
-  font-family: 'Merienda', sans-serif;
+  font-family: 'Arial', sans-serif; /* Change font family */
   font-size: 20px;
 }
 
@@ -44,8 +44,8 @@ header {
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Merienda', sans-serif;
-  font-size: 10px;
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 35px;
 }
 
 #mainDiv {
@@ -102,22 +102,21 @@ header {
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Merienda', sans-serif;
+  font-family: 'Arial', sans-serif; /* Change font family */
   font-size: 15px;
 }
 
-#start-quiz {
+#startQuizBtn {
   grid-column: 2 / span 2;
-  grid-row: 5 / span 1;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 10%;
   border: 0;
-  outline: 0;
+  outline: 0; /* Remove border around button */
   background-color: purple;
   place-self: center;
   color: white;
-  font-family: 'Merienda', sans-serif;
-  font-size: 15px;
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 20px;
 }
 
 #answer1,
@@ -131,7 +130,7 @@ header {
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Merienda', sans-serif;
+  font-family: 'Arial', sans-serif; /* Change font family */
   font-size: 15px;
   margin-left: 25px;
 }

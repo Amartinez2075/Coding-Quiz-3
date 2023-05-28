@@ -67,7 +67,7 @@ const quizData = {
   const scoreDisplay = document.getElementById("scoreDisplay");
   
   // Event Listener for Start Quiz Button
-  startQuizBtn.addEventListener("onclick", startQuiz);
+  startQuizBtn.addEventListener("click", startQuiz);
   
   // Start Quiz Function
   function startQuiz() {
