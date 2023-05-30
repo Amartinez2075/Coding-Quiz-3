@@ -192,6 +192,17 @@ header {
   }
 }
 
+#answerCorrectWrongGrid {
+  color: #cc00ff;
+  
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+
 .option {
   grid-column: 2 / span 2;
   padding: 10px 10px 10px 10px;

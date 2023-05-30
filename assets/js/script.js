@@ -100,9 +100,13 @@ function selectAnswer(optionIndex) {
 
   if (optionIndex === questionData.correctAnswer) {
     messageDisplay.textContent = "Correct!";
+    messageDisplay.classList.remove("wrong"); // Remove wrong class
+    messageDisplay.classList.add("correct"); // Add correct class
     score++;
   } else {
     messageDisplay.textContent = "Wrong!";
+    messageDisplay.classList.remove("correct"); // Remove correct class
+    messageDisplay.classList.add("wrong"); // Add wrong class
   }
 
   currentQuestion++;
@@ -111,6 +115,7 @@ function selectAnswer(optionIndex) {
       displayQuestion();
       startTimer();
       messageDisplay.textContent = "";
+      messageDisplay.classList.remove("correct", "wrong"); // Remove both classes
     }, 1000);
   } else {
     endQuiz();
