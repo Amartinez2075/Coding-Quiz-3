@@ -63,7 +63,7 @@ const startQuizBtn = document.getElementById("startQuizBtn");
 const questionDisplay = document.getElementById("questionDisplay");
 const optionsContainer = document.getElementById("optionsContainer");
 const messageDisplay = document.getElementById("messageDisplay");
-const timerDisplay = document.getElementById("timerDisplay");
+const timerLeft = document.getElementById("timerLeft");
 const scoreDisplay = document.getElementById("scoreDisplay");
 
 // Event Listener for Start Quiz Button
@@ -142,11 +142,11 @@ function displayAnswer() {
 // Start Timer Function
 function startTimer() {
   timeLeft = 60;
-  timerDisplay.textContent = timeLeft;
+  timeLeft.textContent = timeLeft;
 
   intervalId = setInterval(() => {
     timeLeft--;
-    timerDisplay.textContent = timeLeft;
+    timeLeft.textContent = timeLeft;
 
     if (timeLeft === 0) {
       clearInterval(intervalId);
@@ -159,8 +159,8 @@ function startTimer() {
 function endQuiz() {
   questionDisplay.textContent = "Quiz completed!";
   optionsContainer.innerHTML = "";
-  messageDisplay.textContent = "";
-  timerDisplay.textContent = "";
+  messageDisplay.textContent = "Correct";
+  timerDisplay.textContent = "60";
 
   scoreDisplay.textContent = "Final Score: " + score;
   scoreDisplay.style.display = "";
