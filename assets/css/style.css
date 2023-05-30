@@ -133,6 +133,7 @@ header {
   font-family: 'Arial', sans-serif; /* Change font family */
   font-size: 15px;
   margin-left: 25px;
+  
 }
 
 #answer1:hover,
@@ -189,4 +190,24 @@ header {
     grid-column: 2 / span 2;
     font-size: 15px;
   }
+}
+
+.option {
+  grid-column: 2 / span 2;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  border: 0;
+  outline: 0; /* Remove border around button */
+  background-color: purple;
+  place-self:center-center;
+  color: white;
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-size: 20px;
+}
+
+.option:hover {
+  background-color: #cc00ff;
 }
