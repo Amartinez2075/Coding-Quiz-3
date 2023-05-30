@@ -186,10 +186,14 @@ header {
     margin-right: 5%;
   }
 
+#gridContainer {
+
+}
+
   #questionDisplay {
-    grid-column: 2 / span 2;
-    font-size: 15px;
-  }
+position: relative;
+  top: 100%;
+  left: 66%;}
 }
 
 #answerCorrectWrongGrid {
