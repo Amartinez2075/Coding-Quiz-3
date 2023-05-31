@@ -18,43 +18,12 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
-## REMEMBER TO PUT A SCREEN SHOT OF THE FINISHED QUIZ HERE
+## Description 
+This is a straightforward coding quiz that offers multiple choice options for the user to select from. After each selection, the user receives immediate feedback on whether their answer was correct or not. At the end of the quiz, the user can enter their name or initials, press the enter key, and view their score through an alert message. The grading system is based on percentages.
+
+## Deployment Link
 
 
-prompt: "What is JavaScript"?,
-    options: [
-      {
-        value: 1. "A scripting language used for creating interactive webpages",
-        isCorrect: true,
-      },
-      {
-        value: "A video game",
-        isCorrect: false,
-      },
-      {
-        value: "An indie movie",
-        isCorrect: false,
-      },
-      {
-        value: "A type of computer"
-      } isCorrect: false,
-    ],
-  },
-  {
-    prompt: "What's my last name?",
-    options: [
-      {
-        value: "Paul",
-        isCorrect: false,
-      },
-      {
-        value: "Martinez",
-        isCorrect: true,
-      },
-      {
-        value: "Jake",
-        isCorrect: false,
-      },
-    ],
-  },
-];
+## Coding Quiz Starter Page
+
+![Coding Quiz Starter Page](../../../Downloads/Screenshot%202023-05-31%20175743.png)
