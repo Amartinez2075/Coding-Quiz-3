@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 22px;
   background-color: white;
 }
@@ -21,6 +21,7 @@ header {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  align-items: center;
 }
 
 #viewHighScoreBtn{
@@ -29,7 +30,7 @@ header {
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 35px;
 }
 .btnHeader {
@@ -39,7 +40,7 @@ header {
   border: 0;
   outline: 0;
   color: blueviolet;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 20px;
 }
 
@@ -53,7 +54,7 @@ header {
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 35px;
 }
 
@@ -103,7 +104,7 @@ align-items: center;
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 15px;
 }
 
@@ -116,7 +117,7 @@ align-items: center;
   background-color: purple;
   place-self: center;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 20px;
 }
 
@@ -131,7 +132,7 @@ align-items: center;
   outline: 0;
   background-color: purple;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 15px;
   margin-left: 25px;
   
@@ -214,7 +215,7 @@ align-items: center;
   background-color: purple;
   place-self:center-center;
   color: white;
-  font-family: 'Arial', sans-serif; /* Change font family */
+  font-family:Arial, Helvetica, sans-serif; /* Change font family */
   font-size: 20px;
 }
 

@@ -1,3 +1,5 @@
+var inputEl = document.getElementById("initialsInput")
+inputEl.style.display = "none"
 // Quiz Data
 const quizData = {
   1: {
@@ -141,7 +143,6 @@ function displayAnswer() {
   // Append the answer display to the options container
   optionsContainer.appendChild(answerDisplay);
 }
-
 // Start Timer Function
 function startTimer() {
   timeLeft = 60;
@@ -157,19 +158,19 @@ function startTimer() {
     }
   }, 1000);
 }
-
 // End Quiz Function
 function endQuiz() {
-  questionDisplay.textContent = "Quiz completed!";
+  inputEl.style.display = "block"
+  initialsInput.style.display = "block";
+  console.log("End Quiz")
+  questionDisplay.textContent = "Quiz completed! Type your name or initals below then hit the enter key, then you can click on the view high score button to see your score.";
   optionsContainer.innerHTML = "";
   messageDisplay.textContent = "Correct";
   timerLeft.textContent = "60";
 
-  scoreDisplay.textContent = "Final Score: " + score;
-  scoreDisplay.style.display = "";
-
+  //scoreDisplay.textContent = "Final Score: " + score;
+  //scoreDisplay.style.display = "";
   setTimeout(() => {
-    initialsInput.style.display = "block";
     viewHighScoreBtn.style.display = "block";
   }, 1000);
 }
@@ -178,8 +179,9 @@ function endQuiz() {
 // View High Score Function
 function viewHighScore() {
   const initials = initialsInput.value;
-  const highScore = `${initials}: ${score}`;
+  const totalQuestions = Object.keys(quizData).length;
+  const percentage = (score / totalQuestions) * 100;
 
-  // Display high score
-  alert(`Your high score is ${highScore}`);
+  // Display high score percentage
+  alert(`Your score is ${percentage}%`);
 }
