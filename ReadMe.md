@@ -22,8 +22,9 @@ THEN I can save my initials and score
 This is a straightforward coding quiz that offers multiple choice options for the user to select from. After each selection, the user receives immediate feedback on whether their answer was correct or not. At the end of the quiz, the user can enter their name or initials, press the enter key, and view their score through an alert message. The grading system is based on percentages.
 
 ## Deployment Link
-
+https://amartinez2075.github.io/Coding-Quiz-3/
 
 ## Coding Quiz Starter Page
 
-![Coding Quiz Starter Page](../../../Downloads/Screenshot%202023-05-31%20175743.png)
+![Screenshot 2023-05-31 175743](https://github.com/Amartinez2075/Coding-Quiz-3/assets/123604658/48cb59c8-8d44-43d9-af17-4f73eef71b9f)
+
