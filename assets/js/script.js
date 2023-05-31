@@ -65,9 +65,12 @@ const optionsContainer = document.getElementById("optionsContainer");
 const messageDisplay = document.getElementById("messageDisplay");
 const timerLeft = document.getElementById("timerLeft");
 const scoreDisplay = document.getElementById("scoreDisplay");
+const initialsInput = document.getElementById("initialsInput");
+const viewHighScoreBtn = document.getElementById("viewHighScoreBtn");
 
 // Event Listener for Start Quiz Button
 startQuizBtn.addEventListener("click", startQuiz);
+viewHighScoreBtn.addEventListener("click", viewHighScore);
 
 // Start Quiz Function
 function startQuiz() {
@@ -142,11 +145,11 @@ function displayAnswer() {
 // Start Timer Function
 function startTimer() {
   timeLeft = 60;
-  timeLeft.textContent = timeLeft;
+  timerLeft.textContent = timeLeft;
 
   intervalId = setInterval(() => {
     timeLeft--;
-    timeLeft.textContent = timeLeft;
+    timerLeft.textContent = timeLeft;
 
     if (timeLeft === 0) {
       clearInterval(intervalId);
@@ -160,8 +163,23 @@ function endQuiz() {
   questionDisplay.textContent = "Quiz completed!";
   optionsContainer.innerHTML = "";
   messageDisplay.textContent = "Correct";
-  timerDisplay.textContent = "60";
+  timerLeft.textContent = "60";
 
   scoreDisplay.textContent = "Final Score: " + score;
   scoreDisplay.style.display = "";
+
+  setTimeout(() => {
+    initialsInput.style.display = "block";
+    viewHighScoreBtn.style.display = "block";
+  }, 1000);
+}
+
+
+// View High Score Function
+function viewHighScore() {
+  const initials = initialsInput.value;
+  const highScore = `${initials}: ${score}`;
+
+  // Display high score
+  alert(`Your high score is ${highScore}`);
 }
